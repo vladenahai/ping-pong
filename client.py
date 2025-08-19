@@ -10,6 +10,12 @@ screen = display.set_mode((WIDTH, HEIGHT))
 clock = time.Clock()
 display.set_caption("Пінг-Понг")
 # ---СЕРВЕР ---
+back = image.load("photo_2025-08-19_11-29-41.jpg")
+back = transform.scale(back,(WIDTH, HEIGHT))
+mixer.init()
+mixer.music.load("pixel-fight-8-bit-arcade-music-background-music-for-video-208775.mp3")
+mixer.music.set_volume(0.3)
+mixer.music.play(-1)
 def connect_to_server():
     while True:
         try:
@@ -88,7 +94,7 @@ while True:
         continue  # Блокує гру після перемоги
 
     if game_state:
-        screen.fill((30, 30, 30))
+        screen.blit(back,(0,0))
         draw.rect(screen, (0, 255, 0), (20, game_state['paddles']['0'], 20, 100))
         draw.rect(screen, (255, 0, 255), (WIDTH - 40, game_state['paddles']['1'], 20, 100))
         draw.circle(screen, (255, 255, 255), (game_state['ball']['x'], game_state['ball']['y']), 10)
