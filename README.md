@@ -15,7 +15,7 @@
 1. **Завантаж проєкт**
    - Можеш клонувати або завантажити ZIP:
      ```
-     git clone https://github.com/KravaAO/ping-pong.git
+     git clone https://github.com/sviinik/ping-pong.git
      ```
 
 2. **Увімкни сервер**
